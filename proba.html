@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Próba</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="proba.js"></script>
+
+    <style>
+        .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    text-align: left;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
+    border-radius: 15px;
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+
+  .flip-card-back {
+    background-color: gray;
+    color: black;
+    transform: rotateY(180deg);
+  }
+
+  td{
+    padding: 30px;
+  }
+    </style>
+</head>
+<body onload="onLoad()">
+
+    <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+            <td>
+                <div class="flip-card" onclick="kariko()">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="karikot/kariko1.jfif" alt="Karikó Katalin" style="width:300px;height:300px;border-radius: 15px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Karikó Katalin</h1> 
+                        <h2>1955 - </h2>
+                        <p>Karikó Katalin az Amerikai Egyesült Államokban élő Széchenyi-díjas magyar kutatóbiológus, a szintetikus mRNS alapú vakcinák orvosi technológiájának kifejlesztését felfedezéseivel megalapozó biokémikus.</p>
+                      </div>
+                    </div>
+                  </div>
+            </td>
+
+            <td>
+                <div class="flip-card" onclick="asboth()"> 
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="asboth/Asbothoszkar.jpg" alt="Asboth Oszkár" style="width:300px;height:300px;border-radius: 15px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Asboth Oszkár</h1> 
+                        <h2>1891 - 1960</h2>
+                        <p>nyelvész, a szláv nyelvtudomány egyetemi tanára, a Magyar Tudományos Akadémia tagja (levelező: 1892, rendes: 1907). Fia, Asbóth János, testvére Asbóth Lajos. Fő munkája a magyar nyelv szláv eredetű elemeinek kutatása. Az ELTE Bölcsészettudományi Kar egykori dékánja.
+                      </div>
+                    </div>
+                  </div>
+            </td>
+
+            <td>
+                <div class="flip-card" onclick="teller()">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="teller/teller1.jpg" alt="Teller Ede" style="width:300px;height:300px;border-radius: 15px;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Teller Ede</h1> 
+                        <h2>1908 - 2003</h2>
+                        <p>Teller Ede, vagy teljes nevén Teller Ede Sebestyén (1908-2003) magyar származású fizikus, aki az atomfizika területén ért el jelentős eredményeket, és kulcsfontosságú szerepet játszott az amerikai hidrogénbomba megalkotásában.</p>
+                      </div>
+                    </div>
+                  </div>
+            </td>
+        </tr>
+    </table>
+
+    <article class="kezdes" id="kezdo"><h1 class="figyelmeztetes">Válasszon egy kártyát.</h1></article>
+
+    <div class="tartalom">
+    <article class="balsav" id="tudos_bal">
+
+      <div id="kariko_b">
+        <h1 class="nev">Karikó Katalin</h1>
+        <span class="elettartam">1955 - </span>
+        <p>
+          Karikó Katalin a magyar születésű kutató, akinek az MRNA technológián alapuló koronavírus elleni oltások kifejlesztésében játszott szerepe kiemelkedő. Karikó évtizedeken át dolgozott az MRNA kutatásán és fejlesztésén, és a mai napig vezető kutatóként tevékenykedik az amerikai Penn Medicine egyetemen. A pandémia kitörésekor az ő kutatási eredményei alapján indultak el a vakcinafejlesztések, és a Pfizer-BioNTech és a Moderna által kifejlesztett oltások is az ő munkájának eredményei alapján készültek. Karikó az MRNA technológia további kutatásán dolgozik, és folyamatosan kutatja az újabb oltási lehetőségeket is.
+        </p>
+        <figure class="kozep">
+          <img src="karikot/kariko1.jfif" alt="Karikó Katalin" class="kep" height="180px">
+          <figcaption>Karikó Katalin</figcaption>
+        </figure>
+      </div>
+
+      <div id="asboth_b">
+        <h1 class="nev">Asboth Oszkár</h1>
+        <span class="elettartam">1891 - 1960</span>
+        <p>
+          Asboth Oszkár a magyar mérnök és feltaláló, aki számos fontos találmánnyal járult hozzá a műszaki fejlődéshez. Legismertebb találmánya az Asboth-rendszer nevű helikopter, amelyet 1928-ban fejlesztett ki. Emellett számos más területen is aktív volt, és többek között repülőgépeket, motorokat és hajókat is tervezett. Asboth életében számos kitüntetést kapott, és a magyar repülési történelem egyik legjelentősebb alakja volt. Találmányai nagy hatással voltak a műszaki fejlődésre, és napjainkban is használják az általa fejlesztett helikopter alapjait.
+        </p>
+        <figure class="kozep">
+          <img src="asboth/Asbothoszkar.jpg" alt="Asboth Oszkár" class="kep" height="180px">
+          <figcaption>Asboth Oszkár</figcaption>
+        </figure>
+      </div>
+
+      <div id="teller_b">
+        <h1 class="nev">Teller Ede</h1>
+        <span class="elettartam">1908 - 2003</span>
+        <p>
+          Teller Ede a magyar származású amerikai fizikus, aki a hidrogénbomba atombombával történő előállításának elméleti kidolgozásában játszott kulcsszerepet. A második világháború idején dolgozott a manhattani projektben, majd később a hidrogénbombával kapcsolatos kutatásokban vett részt. Teller a nukleáris energia békés célú felhasználásának fontosságát is hangsúlyozta, és sokat tett az amerikai tudományos kutatások fejlődése érdekében. Munkásságáért számos kitüntetést kapott, és az atomtudomány egyik legismertebb alakja lett.
+        </p>
+        <figure class="kozep">
+          <img src="teller/teller1.jpg" alt="Teller Ede" class="kep" height="200px">
+          <figcaption>Teller Ede</figcaption>
+        </figure>
+      </div>
+
+    </article>
+
+    <article class="jobbsav" id="tudos_jobb">
+
+      <div id="kariko_j">
+        <h1>Életpályája és munkái</h1>
+        <p>Karikó Katalin egy magyar származású biokémikus, aki a molekuláris biológiában és az RNS kutatásban játszott szerepéért vált ismertté. Jelenleg a <u>Penn Medicine egyik professzora</u> és vezető kutatója.</p> 
+        <p>Karikó Katalin az ELTE-n tanult biológiát, majd a Pécsi Orvostudományi Egyetemre került, ahol orvosi diplomát szerzett. Az USA-ban folytatta tanulmányait, a Temple Egyetemen doktorált, majd posztdoktori kutatásokat végzett a Penn Egyetemen. Karrierjének nagy részét a Penn Medicine-nél töltötte, ahol az RNS kutatására fókuszált.</p> 
+        <p>Karikó Katalin felfedezte az <u>RNS módosításainak hatékonyabb módját,</u> amely lehetővé tette az RNS gyógyszerként való felhasználását. Az RNS gyógyszerek a jövőben számos betegség, például a rák, a szívbetegségek, a cukorbetegség és a fertőző betegségek kezelésére szolgálhatnak.</p> 
+        <p>Karikó Katalin több mint 150 tudományos cikket publikált, és több szabadalom szerzője is. 2021-ben a TIME magazin az év emberének választotta Karikó Katalint és a Pfizer és BioNTech RNS alapú COVID-19 vakcinájának fejlesztőit, az elismerést a világjárvány elleni harcban való munkájukért kapták.</p> 
+      </div>
+
+      <div id="asboth_j">
+        <h1>Életpályája és munkái</h1>
+        <p>Asboth Oszkár élete során számos különböző területen tevékenykedett, de az igazi szenvedélye a repüléstechnika volt. 1912-ben első magyar szakmérnökként szerezte meg a repülőgép-vezetői engedélyt, majd a világháborúban mint pilóta és repülőgép-tervező dolgozott.</p>
+        <p>1917-ben saját tervezésű helikopterrel állt elő, melynek első repülését sikeresen végrehajtotta. Ez a kísérleti jármű azonban nem jutott tovább a prototípus stádiumánál, mert az anyagi lehetőségek hiánya miatt nem tudta továbbfejleszteni.</p>
+        <p>Asboth Oszkár neve azonban főként a <u>helikopter-tervezés területén vált ismertté.</u> Az általa tervezett helikopterek közül az egyik legismertebb a "Főnix" nevű típus volt, melyet a második világháború után fejlesztett ki és több mint 300 példányban gyártottak le. Ezzel a típussal számos világrekordot is felállítottak, és a magyar légierő is használta őket különféle feladatokra.</p>
+        <p>Asboth Oszkár élete és munkássága <u>jelentős hatással volt a magyar repüléstechnika fejlődésére,</u> és a helikopter-tervezés területén elért eredményei ma is nagy tiszteletet és elismerést vívnak ki a szakmai közösségből.</p>
+      </div>
+
+      <div id="teller_j">
+        <h1>Életpályája és munkái</h1>
+        <p>Teller Ede, vagy teljes nevén Teller Ede Sebestyén (1908-2003) magyar származású fizikus, aki az <u>atomfizika területén</u> ért el jelentős eredményeket, és <u>kulcsfontosságú szerepet</u> játszott az amerikai <u>hidrogénbomba</u> megalkotásában.</p> 
+        <p>A <u>budapesti Műegyetem és a Berlini Egyetem hallgatójaként szerezte meg mérnöki diplomáját,</u> majd az 1930-as években az Egyesült Államokba emigrált. Ott dolgozott a Columbia Egyetemen, majd a Los Alamos Nemzeti Laboratóriumban, ahol részt vett az első atombombák kifejlesztésében. Később az amerikai hidrogénbomba megalkotásában is kulcsszerepet játszott, és évtizedeken át a hidegháborús atomfizikai kutatások vezető alakja volt.</p> 
+        <p>A fizikai tudományok terén számos fontos eredményt ért el, például az atommag magjainak részecskékkel történő bombázásának felfedezését, és az ebből származó jelenségek részletes tanulmányozását. Teller fontos szerepet játszott az amerikai űrkutatás fejlesztésében is, és több mint 200 tudományos publikáció szerzője volt.</p> 
+        <p>Életében számos díjat és kitüntetést kapott, köztük a Kossuth-díjat és az amerikai Nemzeti Tudományos Érdemrendet. Emellett az életét bemutató filmek is készültek, és sokan a modern atomfizika egyik legnagyobb alakjának tartják.</p> 
+      </div>
+    </article>
+</div> 
+    
+<div>
+  <article class="talalmany" id="kariko_t">
+      <h1>Találmányai, kutatásai</h1>
+      <p>Karikó Katalin az mRNS kutatások egyik meghatározó alakja, aki fontos szerepet játszott az MRNS alapú oltások kifejlesztésében, beleértve a Covid-19 oltásokat is. <span id="kariko_t_pontok">...</span></p> 
+      <div id="kariko_t_szoveg" style="display: none;">
+      <p>Az mRNS (messenger ribonucleic acid) egy olyan molekula, amely fontos szerepet játszik a genetikai információk átvitelében a sejtekben. Karikó Katalin már a 90-es években is a mRNS kutatásával foglalkozott, de az áttörést az jelentette, amikor sikerült megtalálnia azt az eljárást, amely lehetővé teszi az mRNS átjutását a sejtek membránján.</p> 
+      <p>Ez a felfedezés lehetővé tette az mRNS alapú oltások kifejlesztését, amelyek a Covid-19 járvány elleni harcban játszottak kritikus szerepet. Az első ilyen oltás, amely az mRNS technológiát használja, a Pfizer/BioNTech oltás volt, amelyet 2020-ban engedélyeztek sürgősségi alkalmazásra az Egyesült Államokban.</p> 
+      <p>Karikó Katalin fontos szerepet játszott az mRNS technológiára épülő oltások kifejlesztésében. Az általa vezetett kutatócsoport már 1995-ben is olyan tanulmányt publikált, amelyben az mRNS molekulákat a sejtekbe juttatták, azonban az eredmények nem voltak olyan hatékonyak, mint amilyeneket ma látunk a Covid-19 oltások esetében. A kutatása azonban fontos alapokat teremtett a jelenlegi oltások fejlesztéséhez.</p> 
+        <figure>
+        <img src="karikot/vakcina.jpeg" alt="Vakcina" class="kep" width="240px"> <img src="karikot/vakcina.2.jpg" alt="Vakcina" class="kep" width="240px"> <img src="karikot/vakcina3.jpg" alt="Vakcina" class="kep" width="240px"> 
+        </figure>
+      </div>
+        <span class="gomb" id="kariko_t_gomb" onclick="kariko_t()">Több...</span>
+  </article>
+
+  <article class="talalmany" id="asboth_t">
+    <h1>Találmányai, kutatásai</h1>
+     <p>Asboth Oszkár (1891-1960) magyar mérnök és feltaláló, aki fontos szerepet játszott a helikopter technológia fejlesztésében. <span id="asboth_t_pontok">...</span></p>
+     <div id="asboth_t_szoveg" style="display: none;">
+     <p>Asboth a 20. század elején kezdett foglalkozni a repüléssel és a helikopterekkel, és a két világháború között több helikopter prototípust is tervezett és épített. 1928-ban Asboth és egy munkatársa, German Carl Focke, megépítették a világ első működőképes helikopterét. <u>Az első kísérleti repülések 1928-ban zajlottak, majd a prototípusot tökéletesítették és 1930-ban szabadalmaztatták.</u></p>
+     <p>Asboth újító megoldása az volt, hogy a rotort hajtóművet helyezett, és nem mint az addigi helikopterekben, ahol a rotort a pilóta hajtotta meg. Emellett új, speciális rotort is tervezett, amely jobb hatékonyságot biztosított a repülőgépnek.</p>
+     <p>A helikopter technológiájának kifejlesztése Asboth munkásságának köszönhetően ma is folyamatosan fejlődik. Az Asboth-féle helikopter megteremtette a modern helikopter technológia alapjait, és jelentősen hozzájárult a légi közlekedés fejlődéséhez. Asboth munkássága ma is nagy hatással van a repülésiparra és az innovációra.</p>
+      <figure>
+        <img src="asboth/asbotht.jpg" alt="helikopter" class="kep" width="240px"> <img src="asboth/asbotht3.jpg" alt="helikopter" class="kep" width="240px">  <img src="asboth/asbotht2.jpg" alt="helikopter" class="kep" width="240px"> 
+      </figure>
+    </div>
+      <span class="gomb" id="asboth_t_gomb" onclick="asboth_t()">Több...</span>
+</article>
+
+<article class="talalmany" id="teller_t">
+  <h1>Találmányai, kutatásai</h1>
+  <p>Teller Ede (1908-2003) magyar származású amerikai fizikus, aki fontos szerepet játszott az atombomba kifejlesztésében. <span id="teller_t_pontok">...</span></p> 
+  <div id="teller_t_szoveg" style="display: none;">
+  <p>Teller a 20. század első felében kezdett foglalkozni a nukleáris fizikával, és a második világháború alatt csatlakozott a Manhattan-projekthez, amelynek célja az atombomba kifejlesztése volt. Teller nagyban hozzájárult a hidrogénbomba fejlesztéséhez, amely az atombomba sokkal nagyobb pusztító erejét biztosította.</p> 
+  <p>Teller volt az egyik fő fejlesztője az "Ivy Mike" hidrogénbombának, amelyet 1952-ben teszteltek az Enewetak-atollon. A tesztelés során a bomba 10,4 megatonna TNT-nél is nagyobb robbanást okozott, és a tesztelés óta a legnagyobb robbanás az emberiség történelmében.</p> 
+  <p>Teller a hidrogénbombák mellett a szuperenergiás neutroncsillapítás elméletének kidolgozásában is fontos szerepet játszott, ami szintén fontos előrelépést jelentett az atomerőművek fejlesztésében.</p> 
+  <p>Teller neve gyakran összefonódik azzal a kritikával, hogy nagyban hozzájárult az atombombák kifejlesztéséhez és alkalmazásához, amelyeket az első bomba ledobása Hiroshimára és Nagaszakira szörnyű emberi szenvedést okoztak. Azonban mások szerint Teller sokkal inkább arra törekedett, hogy a hidrogénbombák fejlesztése megakadályozza az atombombák alkalmazását a jövőbeni háborúkban, és hogy ezáltal hozzájáruljon a világ békéjéhez.</p> 
+    <figure>
+      <img src="teller/bomba1.jpg" alt="atombomba" class="kep" width="240px"> <img src="teller/bomba2.jpg" alt="atombomba" class="kep" width="240px"> <img src="teller/bomba3.png" alt="atombomba" class="kep" width="240px"> 
+    </figure>
+  </div>
+    <span class="gomb" id="teller_t_gomb" onclick="teller_t()">Több...</span>
+</article>
+
+</div>
+
+
+    <a href="Webkezdolap.html" class="vissza">
+        <div class="lobby">
+            ⇦
+        </div>
+    </a> 
+
+</body></html>
