@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Kvíz 3</title>
+    <link rel="stylesheet" href="milliomos.css" />
+    <link href="https://fonts.googleapis.com/css?family=ITC+New+Baskerville" rel="stylesheet">
+  </head>
+  <body >
+
+    <header>
+      <h1>Kvíz | Kérdés 3 </h1>
+    </header>
+    <div class="kerdes">
+      <p  id="kerdes">Milyen szerepet játszott Teller Ede az első atombombák kifejlesztésében?</p>
+    </div>
+    <main>
+      <div>
+        
+      </div>
+        </div>
+        <div class="valaszsor">
+          <button class="valasz1" id="1valasz">semmilyet</button>
+          <button class="valasz1" id="2valasz">kulcsfontosságú</button>
+        </div>  
+        <div class="valaszsor">
+          <button class="valasz1" id="3valasz" >részvényes</button>
+          <button class="valasz1" id="4valasz" >elégséges</button>          
+        </div>
+        
+        <form action="milliomos3.html" method="get" >
+          <button type="submit" disabled="true" id="kovi">Következő kérdés</button>
+       </form>
+    </main>
+    
+    <script>
+
+      const helyesValasz = "kulcsfontosságú";
+
+      const valaszok = document.querySelectorAll('.valasz1');
+    
+      valaszok.forEach(button => {
+          button.addEventListener("click", gombertek);
+      });
+      
+
+  
+      function gombertek(event) {
+    // Értékek
+    const gombErtekek = event.target.textContent.toLowerCase().trim();
+    const valthato = false;
+    const nyomottgomb = event.target;
+
+    valaszok.forEach(button => {
+      button.disabled = true;
+      var pontok = localStorage.getItem("pontok");
+
+});
+
+// Valaszok
+if (gombErtekek === helyesValasz) {
+  nyomottgomb.style.backgroundColor = "green";
+  alert("Jó válasz!")
+  document.getElementById("kovi").disabled=false;
+  let pontos = localStorage.getItem("pontok")
+  pontos = pontos + 1
+  localStorage.setItem("pontok", pontos)
+  alert(pontos)
+
+
+}
+else{
+  nyomottgomb.style.backgroundColor = "red";
+   valaszok.forEach(button => {
+    if (button.textContent.toLowerCase().trim() === helyesValasz) {
+      button.style.backgroundColor = "green";
+      alert("rossz válasz!");
+      document.getElementById("kovi").disabled=false;
+      
+    }
+    else{
+      button.style.backgroundColor = "red";
+    }
+  })
+}
+}
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,138 @@
+/* -------------------------------------------- Globális */
+
+body{
+    background-image: url("https://c.wallhere.com/photos/5f/3c/1920x1080_px_chains_Dark_gears_Machine_Pipes_Steampunk-1626439.jpg!d");
+    background-size: 1920px;
+    background-attachment: fixed;
+    color: black;
+    flex-wrap: nowrap;
+}
+
+/* Tartalom */
+
+article{
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 120%;
+    border: 7px outset rgba(255, 223, 143, 0.737);
+    border-radius: 20px;
+    width: 825px;
+    margin-top: 50px;
+    background-image: url("https://t4.ftcdn.net/jpg/01/07/91/67/360_F_107916793_8MPR8uxzajyoGTdGh7S2ciOgZCT5L62J.jpg");
+    filter: contrast(150%);
+    -webkit-filter: contrast(150%);
+    background-size:cover;
+    text-align: justify;
+}
+
+h1.nev{
+    margin-bottom: 0px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+.elettartam{
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+
+u{
+    text-decoration: underline 2px;
+}
+
+.jobbsav{
+    float: right;
+    padding: 12px;
+}
+
+.balsav{
+    float: left;
+    padding: 12px;
+}
+
+.tartalom{
+    margin: 50px;
+}
+
+.kezdes{
+    margin: auto;
+}
+
+.figyelmeztetes{
+    font-size: 150%;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.talalmany{
+    display: block;
+    margin: auto;
+    padding: 15px;
+    height: 200px;
+    margin-top: 700px;
+    transition: height .75s;
+}
+
+.gomb{
+    font-weight: bolder;
+}
+
+.gomb:hover{
+    cursor: pointer;
+}
+
+/* Képek */
+
+figure{
+    margin: 12px;
+}
+
+figure.kozep{
+    display: block;
+    text-align: center;
+}
+
+figure figcaption{
+    text-align: center;
+}
+
+img.kep{
+    border-radius: 20px;
+    padding: 10px;
+}
+
+/* ----------------------------------------------- Menük */
+
+/* Főmenübe */
+
+.lobby{
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: 0px;
+    border-radius: 25px;
+    background-image: url("https://t4.ftcdn.net/jpg/01/07/91/67/360_F_107916793_8MPR8uxzajyoGTdGh7S2ciOgZCT5L62J.jpg");
+    background-size: 100px;
+    margin-left: 15px;
+    position: fixed;
+    bottom: 15px;
+    transition: width 0.75s, height 0.75s, border-radius 0.75s, font-size 0.75s, padding-bottom 0.75s, background-color 0.75s;
+}
+
+a.vissza{
+    color: rgb(149, 120, 53);
+    text-decoration: none;
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.lobby:hover{
+    width: 70px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 50px;
+    padding-bottom: 5px;
+}
